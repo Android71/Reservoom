@@ -22,7 +22,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Reservoom.Models.Reservation">
-    <Position X="4.25" Y="3.75" Width="1.75" />
+    <Position X="4.25" Y="3.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAAAAAAAAIAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Reservation.cs</FileName>
