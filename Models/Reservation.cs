@@ -13,6 +13,8 @@ namespace Reservoom.Models
 
         public DateTime EndTime { get; }    // бронь до... 
 
+        public TimeSpan Length => EndTime.Subtract(StartTime);  // продолжительность бронирования
+
         public Reservation(RoomID roomID, DateTime startTime, DateTime endTime)
         {
             RoomID = roomID;
