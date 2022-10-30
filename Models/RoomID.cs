@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Перегрузка операторов в C#
+//https://www.youtube.com/watch?v=GxpeqHHO-PA&list=PLIIXgDT0bKw4OmiZ9yGmShKsY0XncViZ8&index=11  
+
 namespace Reservoom.Models
 {
     public class RoomID
@@ -22,8 +25,7 @@ namespace Reservoom.Models
             return $"{FloorNumber}{RoomNumber}";
         }
 
-        // Перегрузка операторов в C#
-        //https://www.youtube.com/watch?v=GxpeqHHO-PA&list=PLIIXgDT0bKw4OmiZ9yGmShKsY0XncViZ8&index=11  
+        
 
         public override bool Equals(object obj)
         {
@@ -32,11 +34,26 @@ namespace Reservoom.Models
                 RoomNumber == roomID.RoomNumber;
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// Перегрузка GetHashCode для успешного выполнения Equals
+        /// </summary>
+        /// <returns></returns>
+        // <created>,30.10.2022</created>
+        // <changed>,30.10.2022</changed>
+        // ********************************************************************************
         public override int GetHashCode()
         {
             return HashCode.Combine(FloorNumber, RoomNumber);
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// Перегрузка оператора ==
+        /// </summary>
+        // <created>,30.10.2022</created>
+        // <changed>,30.10.2022</changed>
+        // ********************************************************************************
         public static bool operator ==(RoomID roomID1, RoomID roomID2)
         {
             if (roomID1 is null && roomID2 is null)
