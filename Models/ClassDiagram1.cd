@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Reservoom.Models.Hotel">
-    <Position X="1.5" Y="0.75" Width="2" />
+    <Position X="0.5" Y="0.75" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAAAAAAAAAAAAQAAAAAAABAAEAAAAAAAAA=</HashCode>
       <FileName>Models\Hotel.cs</FileName>
@@ -11,14 +11,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Reservoom.Models.ReservationBook">
-    <Position X="5" Y="0.75" Width="2" />
+    <Position X="0.75" Y="3.75" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAA=</HashCode>
       <FileName>Models\ReservationBook.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Reservoom.Models.Reservation">
-    <Position X="8.5" Y="0.75" Width="1.5" />
+    <Position X="6.25" Y="0.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>CAAAAAACAAAAAAAAAQAAAABAIAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Reservation.cs</FileName>
@@ -28,7 +28,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Reservoom.Models.RoomID">
-    <Position X="11" Y="0.75" Width="1.75" />
+    <Position X="6.25" Y="3.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEgAAAIAAAAAAAAIAAAAABAAAAAiA=</HashCode>
       <FileName>Models\RoomID.cs</FileName>
