@@ -22,5 +22,15 @@ namespace Reservoom.Models
             StartTime = startTime;
             EndTime = endTime;
         }
+
+        public bool Conflicts(Reservation reservation)  // в данном случае reservation - это IncomingReservation
+        {
+            if (reservation.RoomID != RoomID)
+            {
+                return false;
+            }
+
+            return reservation.StartTime < EndTime && reservation.EndTime > StartTime;
+        }
     }
 }

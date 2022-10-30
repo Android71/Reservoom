@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reservoom.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,19 @@ namespace Reservoom.Models
         public IEnumerable<Reservation> GetReservationsForUser(string username)
         {
             return _reservations.Where(r => r.Username == username);
+        }
+
+        public void AddReservation(Reservation reservation /*incomingReservation*/)
+        {
+            foreach (Reservation exictingReservation in _reservations)
+            {
+                // Make Reservation extention in UseCase diagram
+                if (exictingReservation.Conflicts(reservation))
+                {
+                    throw new ReservationConflictException(exictingReservation, reservation);
+                }
+            }
+            _reservations.Add(reservation);
         }
     }
 }

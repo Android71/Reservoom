@@ -17,5 +17,34 @@ namespace Reservoom.Models
             Name = name;
             _reservationBook = new ReservationBook();
         }
+
+        
+        // ********************************************************************************
+        /// <summary>
+        /// Get the reservations for a user
+        /// </summary>
+        /// <param name="username">The username of the user</param>
+        /// <returns></returns>
+        // <created>,30.10.2022</created>
+        // <changed>,30.10.2022</changed>
+        // ********************************************************************************
+        public IEnumerable<Reservation> GetReservationsForUser(string username)
+        {
+            return _reservationBook.GetReservationsForUser(username);
+        }
+
+        // ********************************************************************************
+        /// <summary>
+        /// Make a reservation
+        /// </summary>
+        /// <param name="reservation">The incoming reservation</param>
+        /// <exception cref="ReservationConflictException">Thrown if incoming reservation conflicts with existing reservation.</exception>
+        // <created>,30.10.2022</created>
+        // <changed>,30.10.2022</changed>
+        // ********************************************************************************
+        public void MakeReservation(Reservation reservation)
+        {
+            _reservationBook.AddReservation(reservation);
+        }
     }
 }
