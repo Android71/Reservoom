@@ -25,8 +25,6 @@ namespace Reservoom.Models
             return $"{FloorNumber}{RoomNumber}";
         }
 
-        
-
         public override bool Equals(object obj)
         {
             return obj is RoomID roomID &&
@@ -64,6 +62,16 @@ namespace Reservoom.Models
             return !(roomID1 is null) && roomID1.Equals(roomID2);
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="roomID1"></param>
+        /// <param name="roomID2"></param>
+        /// <returns></returns>
+        // <created>,31.10.2022</created>
+        // <changed>,31.10.2022</changed>
+        // ********************************************************************************
         public static bool operator !=(RoomID roomID1, RoomID roomID2)
         {
             return !(roomID1 == roomID2);

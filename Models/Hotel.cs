@@ -25,8 +25,6 @@ namespace Reservoom.Models
         /// </summary>
         /// <param name="username">The username of the user</param>
         /// <returns></returns>
-        // <created>,30.10.2022</created>
-        // <changed>,30.10.2022</changed>
         // ********************************************************************************
         public IEnumerable<Reservation> GetReservationsForUser(string username)
         {
@@ -39,8 +37,6 @@ namespace Reservoom.Models
         /// </summary>
         /// <param name="reservation">The incoming reservation</param>
         /// <exception cref="ReservationConflictException">Thrown if incoming reservation conflicts with existing reservation.</exception>
-        // <created>,30.10.2022</created>
-        // <changed>,30.10.2022</changed>
         // ********************************************************************************
         public void MakeReservation(Reservation reservation)
         {
