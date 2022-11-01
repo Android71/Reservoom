@@ -11,13 +11,13 @@
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
         <converters:InverseBooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter" />
     </UserControl.Resources>
-    <Grid>
+    <!--<Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0">   --><!--Header and Button--><!--
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="auto" />
@@ -25,23 +25,22 @@
 
             <TextBlock
                 Grid.Column="0"
-                
+                Style="{StaticResource Header}"
                 Text="View Reservations" />
-                <!--Style="{StaticResource Header}"-->
 
             <Button
                 Grid.Column="1"
                 Margin="10 0 0 0"
-                Command="{Binding MakeReservationCommand}"
-                Content="Make Reservation" />
+                Content="Make Reservation"
+                Command="{Binding MakeReservationCommand}"/>
         </Grid>
 
         <Grid Grid.Row="1" Margin="0 25 0 0">
-            <!--<custom:LoadingSpinner
+            --><!--<custom:LoadingSpinner
                 Diameter="100"
                 IsLoading="{Binding IsLoading}"
                 Thickness="5"
-                Color="Black" />-->
+                Color="Black" />--><!--
 
             <Grid Visibility="{Binding IsLoading, Converter={StaticResource InverseBooleanToVisibilityConverter}}">
 
@@ -99,5 +98,74 @@
                 </Grid>
             </Grid>
         </Grid>
+    </Grid>-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Column="0"
+                Style="{StaticResource Header}"
+                Text="View Reservations" />
+
+            <Button
+                Grid.Column="1"
+                Margin="10 0 0 0"
+                Content="Make Reservation" />
+        </Grid>
+
+        <ListView Grid.Row="1" Margin="0 25 0 0">
+            <ListViewItem />
+            <ListViewItem />
+            <ListViewItem />
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View> <!--Как должен выглядеть ListView-->
+                <GridView>  <!--Вид списка в виде сетки-->
+                    <GridViewColumn Header="Room ID">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock HorizontalAlignment="Center" Text="12" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Username">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Padding="0 0 20 0" Text="SingletonSean" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Start Date">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Padding="0 0 20 0" Text="8/20/2021" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="End Date">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Padding="0 0 20 0" Text="10/5/2021" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>
