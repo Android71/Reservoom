@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:Reservoom"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+         <Style x:Key="Header" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24" />
+        </Style>
     </Application.Resources>
 </Application>
