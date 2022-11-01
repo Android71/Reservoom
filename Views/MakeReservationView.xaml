@@ -25,9 +25,8 @@
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
-        <TextBlock
+        <TextBlock   
             Grid.Row="0"
-            
             Text="Make Reservation" Grid.ColumnSpan="2" Margin="0,0,0,64" Grid.RowSpan="2" 
             Style="{StaticResource Header}"/>
 
