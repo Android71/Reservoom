@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="Переопределен метод Equals&#xD;&#xA;Переопределены операторы == и !=">
+    <Position X="9.76" Y="2.302" Height="0.854" Width="1.71" />
+  </Comment>
   <Class Name="Reservoom.Models.Hotel">
-    <Position X="0.5" Y="0.75" Width="4.25" />
+    <Position X="0.5" Y="0.75" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AIAAAAAAAAAAAAAAAAAAAAQAAAAAAABAAEAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAIAAAABAAEAAAAAAAAA=</HashCode>
       <FileName>Models\Hotel.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -11,14 +14,26 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Reservoom.Models.ReservationBook">
-    <Position X="0.75" Y="3.75" Width="3.5" />
+    <Position X="0.5" Y="3.75" Width="3.5" />
+    <AssociationLine Name="_reservations" Type="Reservoom.Models.Reservation" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="4" Y="4.688" />
+        <Point X="6.25" Y="4.688" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.06" Y="0.11" Height="0.182" Width="2.145" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAgAAAAAAAAgAAAAA=</HashCode>
       <FileName>Models\ReservationBook.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_reservations" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Reservoom.Models.Reservation">
-    <Position X="6.25" Y="0.75" Width="1.75" />
+    <Position X="6.25" Y="3.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>CAAAAAACAAAAAAAAAQAAAABAIAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Reservation.cs</FileName>
@@ -28,7 +43,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Reservoom.Models.RoomID">
-    <Position X="6.25" Y="3.75" Width="1.75" />
+    <Position X="9.75" Y="3.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEgAAAIAAAAAAAAIAAAAABAAAAAiA=</HashCode>
       <FileName>Models\RoomID.cs</FileName>
