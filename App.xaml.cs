@@ -49,11 +49,18 @@ namespace Reservoom
         //    base.OnStartup(e);
         //}
 
+        private readonly Hotel _hotel;
+
+        public App()
+        {
+            _hotel = new Hotel("SingletonSean Suite");
+        }
+
         protected override void OnStartup(StartupEventArgs e)
         {
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel()
+                DataContext = new MainViewModel(_hotel)
             };
             MainWindow.Show();
 
